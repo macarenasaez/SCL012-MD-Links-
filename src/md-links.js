@@ -16,7 +16,6 @@ const mdLinks = (path => {
                         resolve(file)
                         console.log(file)
                     }
-                
                 }
             )
             .catch(err => {

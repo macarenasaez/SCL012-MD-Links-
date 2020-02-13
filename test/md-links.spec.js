@@ -1,10 +1,10 @@
-const mdLinks = require('../');
+const mdLinks = require('../src/md-links');
 
 
 describe('mdLinks', () => {
 
-  it('should...', () => {
-    console.log('FIX ME!');
+  it('debería traer archivos md desde un directorio', () => {
+    return expect(mdLinks.mdLinks('/home/laboratoriad300/Escritorio/SCL012-MD-Links-/src')).resolves.toMatchSnapshot();
   });
 
 });

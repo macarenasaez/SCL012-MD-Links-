@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mdLinks debería traer archivos md desde un directorio 1`] = `
+Array [
+  "/home/laboratoriad300/Escritorio/SCL012-MD-Links-/src/README.md",
+]
+`;
