@@ -33,6 +33,7 @@ const readMD =(path =>{
                 reject(console.log("!Ouch¡ nose a encontrado este archivo: " + userpath))
             }
             resolve(data)
+            console.log(data)
         }) 
     })
 })
@@ -45,7 +46,7 @@ const indlinks =(path =>{
             const renderer = new marked.Renderer();
             renderer.link = function(href,title,text){
 
-                if(!href.startsWith("mai:")){
+                
                     links.push({
                         //encotrada la url
                         href:href,
@@ -54,17 +55,18 @@ const indlinks =(path =>{
                         //ruta del archivodonde encuentra el links
                         file:path })
                    
-                }
+                
             }
             marked(res,{renderer:renderer});
             resolve(links)
+            console.log(links)
         })
         .catch(err =>{
             reject(err)
         })
     })
 })
-
-//module.exports = {
-  //  mdLinks
-//}
+indlinks(process.argv[2])
+module.exports = {
+    mdLinks
+}
